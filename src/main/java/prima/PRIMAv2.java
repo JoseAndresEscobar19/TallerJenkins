@@ -118,7 +118,6 @@ public class PRIMAv2 {
 			throw new InvalidPuntosException(NEGATIVE_POINTS);
 		} else if (puntos == 0) {
 			throw new InvalidPuntosException(NO_POINTS);
-
 		} else {
 			getReduccionFactorEdad(edad, puntos);
 			float prima = tarifa_basica * this.factorEdad - this.reduccion;
