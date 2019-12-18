@@ -70,7 +70,7 @@ public class PRIMAv2 {
 	 * @param edad   Entero que representa la edad del conductor
 	 * @param puntos Entero que representa los puntos del conductor
 	 */
-	public void getReduccion_Factor_Edad(int edad, int puntos) {
+	public void getReduccionFactorEdad(int edad, int puntos) {
 
 		if (edad >= 18 && edad < 25) {
 			this.factorEdad = 2.8f;
@@ -120,7 +120,7 @@ public class PRIMAv2 {
 			throw new InvalidPuntosException(NO_POINTS);
 
 		} else {
-			getReduccion_Factor_Edad(edad, puntos);
+			getReduccionFactorEdad(edad, puntos);
 			float prima = tarifa_basica * this.factorEdad - this.reduccion;
 			return prima;
 		}
